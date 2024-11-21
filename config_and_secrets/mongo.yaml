@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-deployment
+  name: mongodb-teja-deployment
   labels:
     app: mongodb
 spec:
@@ -23,7 +23,7 @@ spec:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
             secretKeyRef:
-              name: mongodb-secret
+              name: mongodb-secret-teja
               key: mongo-root-username
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
